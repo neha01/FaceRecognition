@@ -5,7 +5,7 @@ import faceRecognition as fr
 
 
 #This module takes images  stored in diskand performs face recognition
-test_img=cv2.imread('Tutorial_faceRecognition/TestImages/neha1.jpg')
+test_img=cv2.imread('Tutorial_faceRecognition/TestImages/neha1.jpg')#test_img path
 faces_detected,gray_img=fr.faceDetection(test_img)
 print("faces_detected:",faces_detected)
 
