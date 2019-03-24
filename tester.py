@@ -30,7 +30,7 @@ for face in faces_detected:
     print("label:",label)
     fr.draw_rect(test_img,face)
     predicted_name=name[label]
-    if(confidence>37):#If confidence less than 37 then don't print predicted face text on screen
+    if(confidence>37):#If confidence more than 37 then don't print predicted face text on screen
         continue
     fr.put_text(test_img,predicted_name,x,y)
 
