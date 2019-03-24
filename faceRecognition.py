@@ -8,7 +8,7 @@ import numpy as np
 #Given an image below function returns rectangle for face detected alongwith gray scale image
 def faceDetection(test_img):
     gray_img=cv2.cvtColor(test_img,cv2.COLOR_BGR2GRAY)#convert color image to grayscale
-    face_haar_cascade=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')#Load haar classifier
+    face_haar_cascade=cv2.CascadeClassifier('HaarCascade/haarcascade_frontalface_default.xml')#Load haar classifier
     faces=face_haar_cascade.detectMultiScale(gray_img,scaleFactor=1.32,minNeighbors=5)#detectMultiScale returns rectangles
 
     return faces,gray_img
@@ -55,7 +55,7 @@ def draw_rect(test_img,face):
 
 #Below function writes name of person for detected label
 def put_text(test_img,text,x,y):
-    cv2.putText(test_img,text,(x,y),cv2.FONT_HERSHEY_DUPLEX,5,(255,0,0),6)
+    cv2.putText(test_img,text,(x,y),cv2.FONT_HERSHEY_DUPLEX,2,(255,0,0),4)
 
 
 

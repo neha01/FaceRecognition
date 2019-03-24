@@ -5,7 +5,7 @@ import numpy as np
 #This module resizes image from a given directory to 100*100 pixels and writes all images to given directory
 count=0
 
-for path, subdirnames, filenames in os.walk("/Tutorial_faceRecognition/trainingImages"):
+for path, subdirnames, filenames in os.walk("trainingImages"):
 
     for filename in filenames:
       if filename.startswith("."):

@@ -5,21 +5,22 @@ import faceRecognition as fr
 
 
 #This module takes images  stored in diskand performs face recognition
-test_img=cv2.imread('Tutorial_faceRecognition/TestImages/neha1.jpg')#test_img path
+test_img=cv2.imread('TestImages/kangana.jpg')#test_img path
 faces_detected,gray_img=fr.faceDetection(test_img)
 print("faces_detected:",faces_detected)
 
 
 #Comment belows lines when running this program second time.Since it saves training.yml file in directory
-faces,faceID=fr.labels_for_training_data('Tutorial_faceRecognition/trainingImages')
+faces,faceID=fr.labels_for_training_data('trainingImages')
 face_recognizer=fr.train_classifier(faces,faceID)
-face_recognizer.save('trainingData.yml')
-face_recognizer=cv2.face.LBPHFaceRecognizer_create()
+face_recognizer.write('trainingData.yml')
+
 
 #Uncomment below line for subsequent runs
+# face_recognizer=cv2.face.LBPHFaceRecognizer_create()
 # face_recognizer.read('trainingData.yml')#use this to load training data for subsequent runs
 
-name={0:"Priyanka",1:"Neha"}#creating dictionary containing names for each label
+name={0:"Priyanka",1:"Kangana"}#creating dictionary containing names for each label
 
 for face in faces_detected:
     (x,y,w,h)=face

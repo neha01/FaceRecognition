@@ -6,9 +6,9 @@ import faceRecognition as fr
 
 #This module captures images via webcam and performs face recognition
 face_recognizer = cv2.face.LBPHFaceRecognizer_create()
-face_recognizer.read('Tutorial_faceRecognition/trainingData.yml')#Load saved training data
+face_recognizer.read('trainingData.yml')#Load saved training data
 
-name = {0 : "Priyanka",1 : "Neha"}
+name = {0 : "Priyanka",1 : "Kangana"}
 
 
 cap=cv2.VideoCapture(0)
