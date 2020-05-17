@@ -51,11 +51,13 @@ def train_classifier(faces,faceID):
 #Below function draws bounding boxes around detected face in image
 def draw_rect(test_img,face):
     (x,y,w,h)=face
-    cv2.rectangle(test_img,(x,y),(x+w,y+h),(255,0,0),thickness=5)
+    color = (255, 0, 0)
+    cv2.rectangle(test_img,(x,y),(x+w,y+h),color,thickness=5)
 
 #Below function writes name of person for detected label
 def put_text(test_img,text,x,y):
-    cv2.putText(test_img,text,(x,y),cv2.FONT_HERSHEY_DUPLEX,2,(255,0,0),4)
+    color = (255, 0, 0)
+    cv2.putText(test_img,text,(x,y),cv2.FONT_HERSHEY_DUPLEX,2,color,4)
 
 
 
