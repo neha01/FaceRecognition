@@ -58,6 +58,11 @@ def put_text(test_img,text,x,y):
     cv2.putText(test_img,text,(x,y),cv2.FONT_HERSHEY_DUPLEX,2,(255,0,0),4)
 
 
+    
+    
+    
+    
+#Completed
 
 
 
