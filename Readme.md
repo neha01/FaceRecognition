@@ -5,10 +5,7 @@ Face Recognition using OpenCV in Python
 # Youtube Tutorial
 https://youtu.be/h21wMKGs0qs
 
-### Prerequisites
 
-Numpy</br>
-OpenCV
 
 #### Note: Please install opencv-contrib-python package instead of opencv-contrib as it contains the main modules and also contrib modules.
 
